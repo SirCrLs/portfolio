@@ -436,6 +436,199 @@ textarea:focus {
     padding: 5px 11px;
 }
 
+.page-head.projects-page,
+.container.section.projects-page {
+    --project-base: #E6F1FF;
+    --project-primary: #0A192F;
+    --project-secondary: #64FFDA;
+    --project-tertiary: #FF6B6B;
+}
+
+.page-head.projects-page {
+    background: var(--project-primary);
+    border-bottom-color: var(--project-secondary);
+    letter-spacing: .01em;
+}
+
+.container.section.projects-page {
+    background: var(--project-base);
+    max-width: none;
+    padding-block: 48px;
+    color: var(--project-primary);
+}
+
+.projects-page .container {
+    max-width: 1200px;
+}
+
+.projects-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.projects-page .eyebrow {
+    color: var(--project-primary);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.projects-intro h2 {
+    max-width: 16ch;
+    color: var(--project-primary);
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -.03em;
+    line-height: 1.08;
+    margin-bottom: 12px;
+}
+
+.projects-lead {
+    color: var(--project-primary);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 52ch;
+}
+
+.projects-count {
+    align-items: baseline;
+    border-left: 4px solid var(--project-tertiary);
+    display: flex;
+    gap: 8px;
+    padding: 8px 0 8px 16px;
+}
+
+.projects-count strong {
+    color: var(--project-primary);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.projects-count span {
+    color: var(--project-primary);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--paper);
+    border: 2px solid rgba(10, 25, 47, .14);
+    border-radius: 16px;
+    color: var(--project-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    padding: 22px;
+    transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.project-card:focus-visible {
+    outline: 3px solid var(--project-tertiary);
+    outline-offset: 3px;
+}
+
+.project-card:hover {
+    border-color: var(--project-secondary);
+    box-shadow: 0 14px 30px rgba(10, 25, 47, .14);
+    transform: translateY(-4px);
+}
+
+.project-card-topline,
+.project-card-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card-topline {
+    margin-bottom: 28px;
+}
+
+.project-index {
+    color: var(--project-primary);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    opacity: .7;
+    text-transform: uppercase;
+}
+
+.project-arrow {
+    align-items: center;
+    background: var(--project-secondary);
+    border-radius: 50%;
+    color: var(--project-primary);
+    display: inline-flex;
+    font-size: 1.2rem;
+    height: 36px;
+    justify-content: center;
+    line-height: 1;
+    width: 36px;
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.project-description {
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.project-card-footer {
+    align-items: flex-end;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.project-card .chip {
+    border-color: var(--project-primary);
+    color: var(--project-primary);
+    font-size: .78rem;
+    padding: 3px 10px;
+}
+
+.project-card .chip.solid {
+    background: var(--project-primary);
+    color: var(--project-base);
+}
+
+.project-cta {
+    color: var(--project-primary);
+    flex-shrink: 0;
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.project-cta span {
+    color: var(--project-tertiary);
+    font-size: 1.1rem;
+    margin-left: 3px;
+}
+
+.projects-empty {
+    background: var(--paper);
+    border-left: 4px solid var(--project-tertiary);
+    color: var(--project-primary);
+    padding: 16px 20px;
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -485,6 +678,25 @@ textarea:focus {
     .split {gap: 24px;}
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .container.section.projects-page {
+        padding-block: 72px;
+    }
+    .projects-intro {
+        align-items: end;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .projects-count {
+        flex-shrink: 0;
+        margin-bottom: 8px;
+    }
+    .projects-grid {
+        gap: 24px;
+    }
+    .project-card {
+        padding: 26px;
     }
     .grid.two {
         grid-template-columns: repeat(2, 1fr);
