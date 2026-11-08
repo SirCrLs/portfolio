@@ -1,27 +1,22 @@
-# Agent Context
-You are an expert Front end developer in creating modern and responsive web interfaces.
+# Contexto del Proyecto
 
-# Project Description
-This project is my personal portfolio. The goal is to showcase my professional profile, highlighted projects, technical skills, and contact methods through seamless navigation.
+## ¿De quu trata la app?
+Esta aplicacion es un **Portafolio Interactivo y Plataforma de Contacto** personal. Su objetivo principal es exhibir mis proyectos destacados, detallar mis habilidades técnicas y facilitar un canal directo para que clientes o reclutadores puedan agendar reuniones o enviarme mensajes de manera rápida e intuitiva.
 
-# Technology Stack
-- React
-- Next.js
-- Material Design (MUI)
+## ¿Quiun es el usuario?
+El usuario principal esta compuesto por **reclutadores, lideres de equipos de tecnologia y clientes potenciales** (emprendedores o empresas) que buscan talento en desarrollo o diseño. Son usuarios que tienen poco tiempo, por lo que valoran la navegación rápida, la claridad en la información y una experiencia de usuario directa y sin fricciones.
 
-# Exclusions and Strict Rules
-- You will not generate code in TypeScript (use only JavaScript).
-- You will continue using the Next.js blank template as a base.
-- You will not modify the base routing structure without prior authorization.
+## Personalidad del Diseño
+El diseño debe transmitir una personalidad **profesional, moderna, confiable y creativamente audaz**. Queremos evitar interfaces saturadas, apostando por un minimalismo funcional donde el contenido sea el protagonista, complementado con acentos de color que demuestren innovación y energía.
 
-# Design Requirements (Shared Rules)
-- **Typography:** You will implement a clear and hierarchical typographic system for headings and paragraphs, ensuring rhythm and contrast.
-- **Components:** The design must heavily rely on the use of **cards** to display projects and consistent **buttons** for calls to action (CTAs) and contact links, utilizing "Primary" and "Secondary" style components.
-- **Navigation:** All navigation must be handled through a centralized component (Navbar or side menu) that allows navigating between the different sections of the portfolio.
+## Paleta de Colores
+El diseño utilizará un sistema estricto de 4 colores para mantener el contraste y la jerarquía visual:
 
-# Color Palette
-- Primary Color (Petroleum): #265B62
-- Secondary Color (Mustard): #B49640
-- Tertiary / Detail Color (Forest and Red): #1E4E2C / #DF1D22
-- Text Color: #111111
-- Background Color: #F3EFE6
+- **Base:** `#E6F1FF` 
+  - *Uso:* Un tono claro y limpio para el fondo principal de la aplicacion
+- **Primario:** `#0A192F` 
+  - *Uso:* Para tipografías principales, encabezados y fondos de secciones de alto contraste. 
+- **Secundario** `#64FFDA` 
+  - *Uso:* Para botones principales, enlaces, bordes y elementos interactivos. 
+- **Terciario** `#FF6B6B` 
+  - *Uso:* Para elementos que requieren máxima atención, notificaciones o botones de alta prioridad
