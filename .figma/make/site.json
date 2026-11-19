@@ -1,0 +1,10 @@
+{
+  "description": "Presenta proyectos, habilidades y experiencia de un desarrollador de software y analista de datos para ayudar a reclutadores y equipos técnicos a evaluar su trabajo y contactarlo.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
