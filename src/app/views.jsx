@@ -197,7 +197,7 @@ export function HomePage() {
           <h2>
             {t("¿Creamos algo")}
             <br />
-            <em>{t("significativo")}</em>
+            <em>{t("significativo?")}</em>
           </h2>
         </div>
         <Link className="button button-gold" href="/contacto">
@@ -523,10 +523,41 @@ export function ProjectsPage() {
 export function ContactPage() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
-  const submit = (event) => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  const submit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
-    event.currentTarget.reset();
+    setSubmitted(false);
+    setError("");
+    setSending(true);
+
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form));
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "No se pudo enviar el mensaje.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : "No se pudo enviar el mensaje.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -553,11 +584,11 @@ export function ContactPage() {
               "Normalmente respondo en uno o dos días laborables. Incluye todos los detalles que creas importantes.",
             )}
           </p>
-          <a className="contact-method" href="mailto:hola@carlosleal.dev">
+          <a className="contact-method" href="mailto:carlos.leal.lcc@outlook.com">
             <Icon name="mail" />
             <span>
               <small>EMAIL</small>
-              <b>hola@carlosleal.dev</b>
+              <b>carlos.leal.lcc@outlook.com</b>
             </span>
           </a>
           <div className="contact-method">
@@ -568,10 +599,10 @@ export function ContactPage() {
             </span>
           </div>
           <div className="social-links">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a href="https://github.com/SirCrLs" target="_blank" rel="noreferrer" aria-label="GitHub">
               <Icon name="github" />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/carlos-leal-delgado" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <Icon name="linkedin" />
             </a>
           </div>
@@ -617,12 +648,17 @@ export function ContactPage() {
               placeholder={t("Cuéntame un poco sobre tu idea, necesidad o propuesta...")}
             />
           </label>
-          <button className="button button-gold" type="submit">
-            {t("Enviar mensaje")} <Icon name="arrow" size={18} />
+          <button className="button button-gold" type="submit" disabled={sending}>
+            {sending ? t("Enviando...") : t("Enviar mensaje")} <Icon name="arrow" size={18} />
           </button>
           {submitted && (
             <p className="form-success" role="status">
-              <Icon name="check" size={17} /> {t("Mensaje preparado. Te responderé pronto.")}
+              <Icon name="check" size={17} /> {t("Mensaje enviado. Te responderé pronto.")}
+            </p>
+          )}
+          {error && (
+            <p className="form-error" role="alert">
+              {error}
             </p>
           )}
         </form>

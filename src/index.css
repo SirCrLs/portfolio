@@ -1175,6 +1175,10 @@ h2 em::after {
   gap: 8px;
   font-size: 12px;
 }
+.form-error {
+  color: #e8a6a6;
+  font-size: 12px;
+}
 
 footer {
   min-height: 105px;

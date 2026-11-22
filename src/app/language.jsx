@@ -39,7 +39,7 @@ const translations = {
   "Ver todos los proyectos": "See all projects",
   "SIGUIENTE PASO": "NEXT STEP",
   "¿Creamos algo": "Shall we create something",
-  significativo: "meaningful?",
+  "significativo?": "meaningful?",
   "Iniciar una conversación": "Start a conversation",
   "Detrás del código hay": "Behind the code there is",
   "una forma de pensar.": "a way of thinking.",
