@@ -74,9 +74,9 @@ const translations = {
   "Trabajo remoto": "Remote work",
   "Datos e Inteligencia": "Data and Intelligence",
   "Especialidad principal": "Main specialty",
-  "Desarrollo de Producto": "Product Development",
+  "Desarrollo de Software": "Software Development",
   "Construcción end-to-end": "End-to-end delivery",
-  "Infraestructura y Entrega": "Infrastructure and Delivery",
+  "Infraestructura y Despliegue": "Infrastructure and Deploy",
   "Operación confiable": "Reliable operations",
   "Herramientas para llevar una idea": "Tools to take an idea",
   "de datos a producto.": "from data to product.",
@@ -158,7 +158,7 @@ const translations = {
   "Proyecto de machine learning para predecir resultados de partidos de fútbol.":
     "A machine learning project for football match prediction.",
   PROYECTOS: "PROJECTS",
-  "Soluciones creadas para": "Solutions built for",
+  "Soluciones para": "Solutions built for",
   "Una selección de proyectos de ingeniería, backend y analítica, con una vista previa de su enfoque y resultados.":
     "A selection of engineering, backend, and analytics projects, with a preview of their approach and results.",
   "Una selección de mis repositorios públicos pineados en GitHub, con una vista previa de cada proyecto y sus tecnologías principales.":

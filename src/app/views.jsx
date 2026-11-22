@@ -107,32 +107,7 @@ export function HomePage() {
                 {t("Contactarme")}
               </Link>
             </div>
-            <div className="hero-meta">
-              <div>
-                <b>+12</b>
-                <span>
-                  {t("Proyectos")}
-                  <br />
-                  {t("completados")}
-                </span>
-              </div>
-              <div>
-                <b>03</b>
-                <span>
-                  {t("Años creando")}
-                  <br />
-                  {t("soluciones")}
-                </span>
-              </div>
-              <div>
-                <b>100%</b>
-                <span>
-                  {t("Curiosidad")}
-                  <br />
-                  {t("técnica")}
-                </span>
-              </div>
-            </div>
+
           </div>
           <HeroConsole />
         </div>
@@ -334,7 +309,7 @@ export function SkillsPage() {
     {
       number: "02",
       icon: "code",
-      title: t("Desarrollo de Producto"),
+      title: t("Desarrollo de Software"),
       description: t(
         "Servicios, APIs e interfaces que conectan la lógica de negocio con experiencias claras y funcionales.",
       ),
@@ -344,7 +319,7 @@ export function SkillsPage() {
     {
       number: "03",
       icon: "layers",
-      title: t("Infraestructura y Entrega"),
+      title: t("Infraestructura y Despliegue"),
       description: t(
         "Herramientas y prácticas para que cada solución sea reproducible, observable y segura al llegar a producción.",
       ),
@@ -359,27 +334,13 @@ export function SkillsPage() {
         number="02"
         label={t("HABILIDADES")}
         title={t("Herramientas para llevar una idea")}
-        accent={t("de datos a producto.")}
+        accent={t("a la realidad.")}
         description={t(
           "Un catálogo de tecnologías y capacidades que utilizo para construir soluciones completas, confiables y medibles.",
         )}
       />
       <section className="skills-page page-section">
-        <div className="skills-overview">
-          <p>
-            {t(
-              "Mi stack no es una colección aislada de herramientas. Está organizado alrededor de las tres etapas que hacen que un producto técnico funcione de principio a fin.",
-            )}
-          </p>
-          <div>
-            <span>03</span>
-            <small>
-              {t("DOMINIOS")}
-              <br />
-              {t("CONECTADOS")}
-            </small>
-          </div>
-        </div>
+
         <div className="skill-groups">
           {skillGroups.map((group) => (
             <article className="skill-group" key={group.number}>
@@ -488,21 +449,13 @@ export function ProjectsPage() {
       <PageIntro
         number="03"
         label={t("PROYECTOS")}
-        title={t("Soluciones creadas para")}
+        title={t("Soluciones para")}
         accent={t("problemas reales.")}
         description={t(
           "Una selección de mis repositorios públicos pineados en GitHub, con una vista previa de cada proyecto y sus tecnologías principales.",
         )}
       />
       <section className="projects-page page-section">
-        <div className="project-filter" aria-label={t("Categorías de proyectos")}>
-          <span className="selected">
-            {t("Todos")} <b>{projects.length}</b>
-          </span>
-          <span>JavaScript</span>
-          <span>R</span>
-          <span>Python</span>
-        </div>
         <div className="project-list">
           {projects.map((project, index) => (
             <ProjectTile key={project.title} project={project} index={index} />
