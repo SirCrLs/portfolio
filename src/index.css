@@ -2127,8 +2127,19 @@ footer p {
     padding-top: 130px;
   }
   .page-home {
-    min-height: 1050px;
+    height: auto;
+    min-height: 900px;
     max-height: none;
+  }
+  .hero-content {
+    padding-bottom: 10px;
+  }
+  .hero-console {
+    z-index: 1;
+  }
+  .home-summary {
+    position: relative;
+    z-index: 0;
   }
   .home-summary,
   .contact-page {
@@ -2185,6 +2196,18 @@ footer p {
   .page-intro {
     min-height: 480px;
     padding-inline: 20px;
+  }
+  .page-number {
+    right: 18px;
+    bottom: -28px;
+    font-size: 130px;
+  }
+  .page-home {
+    height: auto;
+    min-height: 0;
+  }
+  .hero {
+    padding-top: 110px;
   }
   .page-intro h1 {
     font-size: 42px;
