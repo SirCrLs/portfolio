@@ -164,6 +164,10 @@ const translations = {
   "Una selección de mis repositorios públicos pineados en GitHub, con una vista previa de cada proyecto y sus tecnologías principales.":
     "A selection of my pinned public GitHub repositories, with a preview of each project and its main technologies.",
   "Categorías de proyectos": "Project categories",
+  "Aplicación móvil de reproducción musical desarrollada con React Native y JavaScript para explorar y escuchar pistas musicales desde el teléfono.":
+    "Mobile music player application built with React Native and JavaScript to browse and listen to tracks on mobile devices.",
+  "Pipeline y modelos de machine learning en Python orientados al análisis de datos deportivos y la estimación de resultados en partidos de fútbol.":
+    "Python machine learning pipeline and models designed for sports data analysis and football match outcome prediction.",
   Todos: "All",
   "¿Quieres conocer el proceso, la arquitectura o revisar el código?":
     "Want to learn about the process, architecture, or code?",

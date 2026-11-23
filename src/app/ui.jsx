@@ -189,8 +189,9 @@ export const projects = [
   {
     type: "REACT NATIVE · MOBILE",
     title: "SPunktify",
-    description: "Reproductor de música construido con React Native.",
-    tags: ["JavaScript", "React Native"],
+    description:
+      "Aplicación móvil de reproducción musical desarrollada con React Native y JavaScript para explorar y escuchar pistas musicales desde el teléfono.",
+    tags: ["JavaScript", "React Native", "Expo"],
     metric: "JS",
     metricLabel: "lenguaje",
     icon: "code",
@@ -199,8 +200,9 @@ export const projects = [
   {
     type: "MACHINE LEARNING · PYTHON",
     title: "IA-PrediccionFutbolistica",
-    description: "Proyecto de machine learning para predecir resultados de partidos de fútbol.",
-    tags: ["Python", "Machine Learning"],
+    description:
+      "Pipeline y modelos de machine learning en Python orientados al análisis de datos deportivos y la estimación de resultados en partidos de fútbol.",
+    tags: ["Python", "Tensorflow", "Scikit-learn"],
     metric: "PY",
     metricLabel: "lenguaje",
     icon: "spark",
