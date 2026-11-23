@@ -174,3 +174,8 @@ Carlos Leal
 GitHub: https://github.com/SirCrLs  
 LinkedIn: https://linkedin.com/in/carlos-leal-delgado  
 Correo: carlos.leal.lcc@outlook.com
+
+## Bitácora de Copilot
+
+Consulta [BITACORA.md](BITACORA.md) para ver un resumen de los cambios realizados
+durante el desarrollo hechos por COPILOT.
